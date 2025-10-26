@@ -1,30 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jason\\Documents\\Visual-Studio-Projecten\\ERPDemoApp\\",
+  "WorkspaceRootPath": "C:\\Users\\jason\\Documents\\PXL-Projecten\\ERP-Project-PXL\\ERPDemoApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{87D3C770-AF04-7A7B-66E3-196420C411BE}|ERPDemoApp\\ERPDemoApp.csproj|c:\\users\\jason\\documents\\visual-studio-projecten\\erpdemoapp\\erpdemoapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{87D3C770-AF04-7A7B-66E3-196420C411BE}|ERPDemoApp\\ERPDemoApp.csproj|solutionrelative:erpdemoapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87D3C770-AF04-7A7B-66E3-196420C411BE}|ERPDemoApp\\ERPDemoApp.csproj|c:\\users\\jason\\documents\\visual-studio-projecten\\erpdemoapp\\erpdemoapp\\wwwroot\\css\\erp.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{87D3C770-AF04-7A7B-66E3-196420C411BE}|ERPDemoApp\\ERPDemoApp.csproj|solutionrelative:erpdemoapp\\wwwroot\\css\\erp.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87D3C770-AF04-7A7B-66E3-196420C411BE}|ERPDemoApp\\ERPDemoApp.csproj|c:\\users\\jason\\documents\\visual-studio-projecten\\erpdemoapp\\erpdemoapp\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87D3C770-AF04-7A7B-66E3-196420C411BE}|ERPDemoApp\\ERPDemoApp.csproj|solutionrelative:erpdemoapp\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87D3C770-AF04-7A7B-66E3-196420C411BE}|ERPDemoApp\\ERPDemoApp.csproj|c:\\users\\jason\\documents\\visual-studio-projecten\\erpdemoapp\\erpdemoapp\\pages\\frontend\\_navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87D3C770-AF04-7A7B-66E3-196420C411BE}|ERPDemoApp\\ERPDemoApp.csproj|solutionrelative:erpdemoapp\\pages\\frontend\\_navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87D3C770-AF04-7A7B-66E3-196420C411BE}|ERPDemoApp\\ERPDemoApp.csproj|c:\\users\\jason\\documents\\visual-studio-projecten\\erpdemoapp\\erpdemoapp\\pages\\frontend\\_dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87D3C770-AF04-7A7B-66E3-196420C411BE}|ERPDemoApp\\ERPDemoApp.csproj|solutionrelative:erpdemoapp\\pages\\frontend\\_dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87D3C770-AF04-7A7B-66E3-196420C411BE}|ERPDemoApp\\ERPDemoApp.csproj|c:\\users\\jason\\documents\\visual-studio-projecten\\erpdemoapp\\erpdemoapp\\pages\\frontend\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{87D3C770-AF04-7A7B-66E3-196420C411BE}|ERPDemoApp\\ERPDemoApp.csproj|c:\\users\\jason\\documents\\pxl-projecten\\erp-project-pxl\\erpdemoapp\\erpdemoapp\\pages\\frontend\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{87D3C770-AF04-7A7B-66E3-196420C411BE}|ERPDemoApp\\ERPDemoApp.csproj|solutionrelative:erpdemoapp\\pages\\frontend\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87D3C770-AF04-7A7B-66E3-196420C411BE}|ERPDemoApp\\ERPDemoApp.csproj|c:\\users\\jason\\documents\\pxl-projecten\\erp-project-pxl\\erpdemoapp\\erpdemoapp\\wwwroot\\css\\erp.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{87D3C770-AF04-7A7B-66E3-196420C411BE}|ERPDemoApp\\ERPDemoApp.csproj|solutionrelative:erpdemoapp\\wwwroot\\css\\erp.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 20,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,80 +34,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\jason\\Documents\\Visual-Studio-Projecten\\ERPDemoApp\\ERPDemoApp\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "ERPDemoApp\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\jason\\Documents\\Visual-Studio-Projecten\\ERPDemoApp\\ERPDemoApp\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "ERPDemoApp\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAABwAAAAAAAAAAAAkwDAAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-10-26T14:02:31.254Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "erp.css",
-              "DocumentMoniker": "C:\\Users\\jason\\Documents\\Visual-Studio-Projecten\\ERPDemoApp\\ERPDemoApp\\wwwroot\\css\\erp.css",
+              "DocumentMoniker": "C:\\Users\\jason\\Documents\\PXL-Projecten\\ERP-Project-PXL\\ERPDemoApp\\ERPDemoApp\\wwwroot\\css\\erp.css",
               "RelativeDocumentMoniker": "ERPDemoApp\\wwwroot\\css\\erp.css",
-              "ToolTip": "C:\\Users\\jason\\Documents\\Visual-Studio-Projecten\\ERPDemoApp\\ERPDemoApp\\wwwroot\\css\\erp.css",
+              "ToolTip": "C:\\Users\\jason\\Documents\\PXL-Projecten\\ERP-Project-PXL\\ERPDemoApp\\ERPDemoApp\\wwwroot\\css\\erp.css",
               "RelativeToolTip": "ERPDemoApp\\wwwroot\\css\\erp.css",
-              "ViewState": "AgIAADoBAAAAAAAAAAAkwEQBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKoBAAAAAAAAAAAkwMUBAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-10-26T14:02:19.782Z",
+              "WhenOpened": "2025-10-26T15:24:57.8Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\jason\\Documents\\Visual-Studio-Projecten\\ERPDemoApp\\ERPDemoApp\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "ERPDemoApp\\Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\jason\\Documents\\Visual-Studio-Projecten\\ERPDemoApp\\ERPDemoApp\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "ERPDemoApp\\Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAgwCwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-26T14:02:12.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Navbar.cshtml",
-              "DocumentMoniker": "C:\\Users\\jason\\Documents\\Visual-Studio-Projecten\\ERPDemoApp\\ERPDemoApp\\Pages\\Frontend\\_Navbar.cshtml",
-              "RelativeDocumentMoniker": "ERPDemoApp\\Pages\\Frontend\\_Navbar.cshtml",
-              "ToolTip": "C:\\Users\\jason\\Documents\\Visual-Studio-Projecten\\ERPDemoApp\\ERPDemoApp\\Pages\\Frontend\\_Navbar.cshtml",
-              "RelativeToolTip": "ERPDemoApp\\Pages\\Frontend\\_Navbar.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-26T14:02:05.524Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "_Sidebar.cshtml",
-              "DocumentMoniker": "C:\\Users\\jason\\Documents\\Visual-Studio-Projecten\\ERPDemoApp\\ERPDemoApp\\Pages\\Frontend\\_Sidebar.cshtml",
+              "DocumentMoniker": "C:\\Users\\jason\\Documents\\PXL-Projecten\\ERP-Project-PXL\\ERPDemoApp\\ERPDemoApp\\Pages\\Frontend\\_Sidebar.cshtml",
               "RelativeDocumentMoniker": "ERPDemoApp\\Pages\\Frontend\\_Sidebar.cshtml",
-              "ToolTip": "C:\\Users\\jason\\Documents\\Visual-Studio-Projecten\\ERPDemoApp\\ERPDemoApp\\Pages\\Frontend\\_Sidebar.cshtml",
+              "ToolTip": "C:\\Users\\jason\\Documents\\PXL-Projecten\\ERP-Project-PXL\\ERPDemoApp\\ERPDemoApp\\Pages\\Frontend\\_Sidebar.cshtml",
               "RelativeToolTip": "ERPDemoApp\\Pages\\Frontend\\_Sidebar.cshtml",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAgwCoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACoAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-26T13:59:09.333Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Dashboard.cshtml",
-              "DocumentMoniker": "C:\\Users\\jason\\Documents\\Visual-Studio-Projecten\\ERPDemoApp\\ERPDemoApp\\Pages\\Frontend\\_Dashboard.cshtml",
-              "RelativeDocumentMoniker": "ERPDemoApp\\Pages\\Frontend\\_Dashboard.cshtml",
-              "ToolTip": "C:\\Users\\jason\\Documents\\Visual-Studio-Projecten\\ERPDemoApp\\ERPDemoApp\\Pages\\Frontend\\_Dashboard.cshtml",
-              "RelativeToolTip": "ERPDemoApp\\Pages\\Frontend\\_Dashboard.cshtml",
-              "ViewState": "AgIAAO4AAAAAAAAAAAAAABMBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-26T13:57:11.46Z",
+              "WhenOpened": "2025-10-26T15:24:22.564Z",
               "EditorCaption": ""
             }
           ]

@@ -1,42 +1,115 @@
 @* Left sidebar navigation for the ERP shell *@
 <aside class="erp-sidebar">
- <div class="erp-brand">
- <i class="bi bi-grid-1x2-fill me-2"></i>
- <span>ERPDemo</span>
- </div>
- <nav class="erp-nav">
- <a class="erp-sidelink" asp-area="" asp-page="/Index">
- <i class="bi bi-house"></i><span>Home</span>
- </a>
+    <div class="erp-brand">
+        <i class="bi bi-grid-1x2-fill me-2"></i>
+        <span>ERPDemo</span>
+    </div>
 
- <div class="erp-navsection">Website</div>
- <a class="erp-sidelink" href="#website">
- <i class="bi bi-bag"></i><span>E-commerce</span>
- </a>
- <a class="erp-sidelink" href="#website">
- <i class="bi bi-shop-window"></i><span>Marketplace</span>
- </a>
+    <nav class="erp-nav">
+        <a class="erp-sidelink" asp-area="" asp-page="/Index">
+            <i class="bi bi-house"></i><span>Home</span>
+        </a>
 
- <div class="erp-navsection">ERP</div>
- <a class="erp-sidelink" href="#inventaris">
- <i class="bi bi-box-seam"></i><span>Inventaris & Productie</span>
- </a>
- <a class="erp-sidelink" href="#personeel">
- <i class="bi bi-people"></i><span>Personeelsbeheer</span>
- </a>
- <a class="erp-sidelink" href="#verkoop">
- <i class="bi bi-cart3"></i><span>Verkoop</span>
- </a>
- <a class="erp-sidelink" href="#financien">
- <i class="bi bi-cash-coin"></i><span>Financiën</span>
- </a>
+        <div class="erp-navsection">Website</div>
+        <a class="erp-sidelink" href="#website">
+            <i class="bi bi-bag"></i><span>E-commerce</span>
+        </a>
+        <a class="erp-sidelink" href="#website">
+            <i class="bi bi-shop-window"></i><span>Marketplace</span>
+        </a>
 
- <div class="erp-navsection">Tools</div>
- <a class="erp-sidelink" href="/swagger" target="_blank">
- <i class="bi bi-braces-asterisk"></i><span>API (Swagger)</span>
- </a>
- <a class="erp-sidelink" href="/todoitems" target="_blank">
- <i class="bi bi-list-check"></i><span>Todo API</span>
- </a>
- </nav>
+        <div class="erp-navsection">ERP</div>
+        <a class="erp-sidelink" href="#inventaris">
+            <i class="bi bi-box-seam"></i><span>Inventaris &amp; Productie</span>
+        </a>
+        <a class="erp-sidelink" href="#personeel">
+            <i class="bi bi-people"></i><span>Personeelsbeheer</span>
+        </a>
+        <a class="erp-sidelink" href="#verkoop">
+            <i class="bi bi-cart3"></i><span>Verkoop</span>
+        </a>
+        <a class="erp-sidelink" href="#financien">
+            <i class="bi bi-cash-coin"></i><span>Financiën</span>
+        </a>
+
+        <div class="erp-navsection">Tools</div>
+        <a class="erp-sidelink" href="/swagger" target="_blank" rel="noopener">
+            <i class="bi bi-braces-asterisk"></i><span>API (Swagger)</span>
+        </a>
+        <a class="erp-sidelink" href="/todoitems" target="_blank" rel="noopener">
+            <i class="bi bi-list-check"></i><span>Todo API</span>
+        </a>
+
+        <div class="erp-navsection">Account</div>
+
+        @* Auth card / Mini profile *@
+        @{
+            var isAuth = User?.Identity?.IsAuthenticated ?? false;
+            var displayName = User?.Identity?.Name ?? "Gebruiker";
+            var email =
+            User?.FindFirst("email")?.Value ??
+            User?.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress")?.Value ??
+            string.Empty;
+
+            var initials = string.Join("",
+            (displayName ?? "")
+            .Split(' ', System.StringSplitOptions.RemoveEmptyEntries)
+            .Take(2)
+            .Select(s => s[0])
+            ).ToUpperInvariant();
+        }
+
+        @if (!isAuth)
+        {
+            <div class="erp-authcard">
+                <div class="erp-authcard-header">
+                    <div class="erp-authcard-badge" aria-hidden="true">
+                        <i class="bi bi-shield-lock"></i>
+                    </div>
+                    <div class="erp-authcard-titles">
+                        <h6>Start gratis</h6>
+                        <p>Maak binnen 1 minuut je account</p>
+                    </div>
+                </div>
+
+                <div class="erp-authcard-actions">
+                    <a class="erp-chip" href="/Account/Login" aria-label="Aanmelden">
+                        <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i>
+                        <span>Aanmelden</span>
+                    </a>
+
+                    <a class="erp-cta" href="/Account/Register" aria-label="Probeer het gratis">
+                        <span>Probeer het gratis</span>
+                        <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <ul class="erp-authcard-points">
+                    <li><i class="bi bi-check2" aria-hidden="true"></i> 14 dagen proef</li>
+                    <li><i class="bi bi-check2" aria-hidden="true"></i> Geen creditcard nodig</li>
+                </ul>
+            </div>
+        }
+        else
+        {
+            <div class="erp-miniuser">
+                <div class="erp-miniuser-left">
+                    <div class="erp-avatar" aria-hidden="true">@initials</div>
+                    <div>
+                        <strong>@displayName</strong>
+                        @if (!string.IsNullOrWhiteSpace(email))
+                        {
+                            <div class="muted">@email</div>
+                        }
+                    </div>
+                </div>
+
+                <div class="erp-miniuser-actions">
+                    <a href="/Account/Manage" class="link">Profiel</a>
+                    <span class="dot" aria-hidden="true">•</span>
+                    <a href="/Account/Logout" class="link">Afmelden</a>
+                </div>
+            </div>
+        }
+    </nav>
 </aside>

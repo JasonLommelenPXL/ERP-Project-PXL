@@ -950,11 +950,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jason\\Documents\\Visual-Studio-Projecten\\ERPDemoApp\\ERPDemoApp\\ERPDemoApp.csproj",
+      "projectUniqueName": "C:\\Users\\jason\\Documents\\PXL-Projecten\\ERP-Project-PXL\\ERPDemoApp\\ERPDemoApp\\ERPDemoApp.csproj",
       "projectName": "ERPDemoApp",
-      "projectPath": "C:\\Users\\jason\\Documents\\Visual-Studio-Projecten\\ERPDemoApp\\ERPDemoApp\\ERPDemoApp.csproj",
+      "projectPath": "C:\\Users\\jason\\Documents\\PXL-Projecten\\ERP-Project-PXL\\ERPDemoApp\\ERPDemoApp\\ERPDemoApp.csproj",
       "packagesPath": "C:\\Users\\jason\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jason\\Documents\\Visual-Studio-Projecten\\ERPDemoApp\\ERPDemoApp\\obj\\",
+      "outputPath": "C:\\Users\\jason\\Documents\\PXL-Projecten\\ERP-Project-PXL\\ERPDemoApp\\ERPDemoApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
