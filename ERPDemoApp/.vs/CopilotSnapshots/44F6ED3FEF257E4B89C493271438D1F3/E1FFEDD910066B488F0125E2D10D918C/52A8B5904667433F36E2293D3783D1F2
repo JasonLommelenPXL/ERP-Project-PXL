@@ -1,0 +1,73 @@
+﻿/* =========================
+   site.css (clean baseline)
+   ========================= */
+
+/* Basis typografie */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Focus rings (zoals in het template) */
+:root {
+    --focus-ring: #258cfb;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem #fff, 0 0 0 0.25rem var(--focus-ring);
+    outline: 0;
+}
+
+/* --------- BELANGRIJK: verwijder oud sticky-footer patroon ---------
+   Geen absolute footer meer; we gebruiken de flex layout in _Layout.cshtml.
+   Daarom GEEN html{position:relative; min-height:100%} en
+   GEEN body{margin-bottom:60px}.
+-------------------------------------------------------------------- */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body zonder extra ondermarge (oude patroon uitgeschakeld) */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer: geen absolute positioning, gewoon normaal document-flow */
+.footer {
+    position: static;
+    width: 100%;
+    /* optioneel: subtiele styling */
+    background: #fff;
+    margin-top: auto; /* duw footer naar onder */
+}
+
+/* Kleine quality-of-life tweaks (optioneel) */
+a {
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+/* Zorg dat hash-navigatie niet onder de topbar valt (werkt samen met erp.css) */
+[id] {
+    scroll-margin-top: 64px;
+}
+
+/* zorg dat de shell de kolomruimte krijgt */
+.container-fluid.erp-shell { flex:11 auto; }

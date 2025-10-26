@@ -1,0 +1,275 @@
+﻿@* ERP Dashboard partial *@
+
+<section id="website" class="erp-section">
+    <h2 class="erp-title">Website</h2>
+    <div class="row g-4 equal-cards">
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-purple"><i class="bi bi-bag"></i></div>
+                <div>
+                    <h3>E-commerce</h3>
+                    <p>Verkoop je producten online</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-indigo"><i class="bi bi-shop-window"></i></div>
+                <div>
+                    <h3>Marketplace</h3>
+                    <p>Verbind je shop met externe marktplaatsen</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="inventaris" class="erp-section">
+    <h2 class="erp-title">Inventaris & Productie</h2>
+    <div class="row g-4 equal-cards">
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-orange"><i class="bi bi-box-seam"></i></div>
+                <div>
+                    <h3>Voorraad</h3>
+                    <p>Beheer je activiteiten met betrekking tot voorraad en logistiek</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-green"><i class="bi bi-columns-gap"></i></div>
+                <div>
+                    <h3>Productie</h3>
+                    <p>Productieorders en stuks­lijsten</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-purple"><i class="bi bi-diagram-3"></i></div>
+                <div>
+                    <h3>PLM</h3>
+                    <p>Product Lifecycle Management</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-teal"><i class="bi bi-bag-check"></i></div>
+                <div>
+                    <h3>Inkoop</h3>
+                    <p>Inkooporders, aanbestedingen en overeenkomsten</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-lime"><i class="bi bi-tools"></i></div>
+                <div>
+                    <h3>Onderhoud</h3>
+                    <p>Beheer jouw uitrusting en aanvragen</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-pink"><i class="bi bi-search"></i></div>
+                <div>
+                    <h3>Kwaliteit</h3>
+                    <p>Controleer de kwaliteit van je producten</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="personeel" class="erp-section">
+    <h2 class="erp-title">Personeelsbeheer</h2>
+    <div class="row g-4 equal-cards">
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-blue"><i class="bi bi-people"></i></div>
+                <div>
+                    <h3>Werknemers</h3>
+                    <p>Centraliseer personeelsinformatie</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-cyan"><i class="bi bi-bullseye"></i></div>
+                <div>
+                    <h3>Werving & Selectie</h3>
+                    <p>Bekijk je aanwervingspijplijn</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-yellow"><i class="bi bi-umbrella"></i></div>
+                <div>
+                    <h3>Verlof</h3>
+                    <p>Wijs betaalde verlofdagen toe en volg aanvragen op</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-amber"><i class="bi bi-stars"></i></div>
+                <div>
+                    <h3>Evaluaties</h3>
+                    <p>Beoordeel je werknemers</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-rose"><i class="bi bi-award"></i></div>
+                <div>
+                    <h3>Aanbeveling</h3>
+                    <p>Deel vacatures en verwijs vrienden door</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-violet"><i class="bi bi-ev-front"></i></div>
+                <div>
+                    <h3>Wagenpark</h3>
+                    <p>Beheer je wagenpark en bekijk de autokosten</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="verkoop" class="erp-section">
+    <h2 class="erp-title">Verkoop</h2>
+    <div class="row g-4 equal-cards">
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-red"><i class="bi bi-person-lines-fill"></i></div>
+                <div>
+                    <h3>CRM</h3>
+                    <p>Volg leads op en sluit verkopen af</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-orange"><i class="bi bi-graph-up"></i></div>
+                <div>
+                    <h3>Verkoop</h3>
+                    <p>Van offertes tot facturen</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-indigo"><i class="bi bi-shop"></i></div>
+                <div>
+                    <h3>Kassa</h3>
+                    <p>Verkooppunt voor winkels en restaurants</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-green"><i class="bi bi-repeat"></i></div>
+                <div>
+                    <h3>Abonnementen</h3>
+                    <p>Terugkerende facturen en verlengingen</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-teal"><i class="bi bi-key"></i></div>
+                <div>
+                    <h3>Verhuur</h3>
+                    <p>Beheer contracten, leveringen en retours</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="financien" class="erp-section">
+    <h2 class="erp-title">Financiën</h2>
+    <div class="row g-4 equal-cards">
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-blue"><i class="bi bi-calculator"></i></div>
+                <div>
+                    <h3>Boekhouding</h3>
+                    <p>Beheer financiële en analytische boekhouding</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-cyan"><i class="bi bi-receipt"></i></div>
+                <div>
+                    <h3>Facturatie</h3>
+                    <p>Facturen & betalingen</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-pink"><i class="bi bi-cash"></i></div>
+                <div>
+                    <h3>Onkosten</h3>
+                    <p>Beheer personeelsuitgaven</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-orange"><i class="bi bi-files"></i></div>
+                <div>
+                    <h3>Documenten</h3>
+                    <p>Documentbeheer</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-lime"><i class="bi bi-table"></i></div>
+                <div>
+                    <h3>Spreadsheets</h3>
+                    <p>Spreadsheet-documenten</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <a class="erp-card w-100 h-100" href="#">
+                <div class="erp-icon erp-icon-teal"><i class="bi bi-pencil-square"></i></div>
+                <div>
+                    <h3>Ondertekenen</h3>
+                    <p>Onderteken documenten online</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>

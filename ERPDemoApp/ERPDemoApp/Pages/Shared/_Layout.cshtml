@@ -1,0 +1,44 @@
+﻿@* /Pages/Shared/_Layout.cshtml *@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ERPDemoApp</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/erp.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ERPDemoApp.styles.css" asp-append-version="true" />
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Topbar -->
+    <header>
+        @await Html.PartialAsync("~/Pages/Frontend/_Navbar.cshtml")
+    </header>
+
+    <!-- Shell (sidebar + content) vult de resterende hoogte -->
+    <div class="container-fluid erp-shell flex-grow-1">
+        @await Html.PartialAsync("~/Pages/Frontend/_Sidebar.cshtml")
+
+        <div class="erp-content">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer blijft onderaan dankzij mt-auto op body-flex -->
+    <footer class="mt-auto border-top footer text-muted bg-white">
+        <div class="container py-2">
+            &copy;@DateTime.Now.Year - ERPDemoApp - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

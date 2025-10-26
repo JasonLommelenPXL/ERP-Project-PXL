@@ -1,0 +1,23 @@
+﻿@* Reusable navbar partial for the frontend *@
+<nav class="navbar navbar-expand-sm navbar-dark erp-topbar mb-0">
+    <div class="container-fluid">
+        <a class="navbar-brand" asp-area="" asp-page="/Index">ERPDemoApp</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="mainNavbar" class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-page="/Privacy">Privacy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/todoitems" target="_blank">Todos (API)</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

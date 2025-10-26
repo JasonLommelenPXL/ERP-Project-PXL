@@ -1,0 +1,42 @@
+@* Left sidebar navigation for the ERP shell *@
+<aside class="erp-sidebar">
+ <div class="erp-brand">
+ <i class="bi bi-grid-1x2-fill me-2"></i>
+ <span>ERPDemo</span>
+ </div>
+ <nav class="erp-nav">
+ <a class="erp-sidelink" asp-area="" asp-page="/Index">
+ <i class="bi bi-house"></i><span>Home</span>
+ </a>
+
+ <div class="erp-navsection">Website</div>
+ <a class="erp-sidelink" href="#website">
+ <i class="bi bi-bag"></i><span>E-commerce</span>
+ </a>
+ <a class="erp-sidelink" href="#website">
+ <i class="bi bi-shop-window"></i><span>Marketplace</span>
+ </a>
+
+ <div class="erp-navsection">ERP</div>
+ <a class="erp-sidelink" href="#inventaris">
+ <i class="bi bi-box-seam"></i><span>Inventaris & Productie</span>
+ </a>
+ <a class="erp-sidelink" href="#personeel">
+ <i class="bi bi-people"></i><span>Personeelsbeheer</span>
+ </a>
+ <a class="erp-sidelink" href="#verkoop">
+ <i class="bi bi-cart3"></i><span>Verkoop</span>
+ </a>
+ <a class="erp-sidelink" href="#financien">
+ <i class="bi bi-cash-coin"></i><span>Financiën</span>
+ </a>
+
+ <div class="erp-navsection">Tools</div>
+ <a class="erp-sidelink" href="/swagger" target="_blank">
+ <i class="bi bi-braces-asterisk"></i><span>API (Swagger)</span>
+ </a>
+ <a class="erp-sidelink" href="/todoitems" target="_blank">
+ <i class="bi bi-list-check"></i><span>Todo API</span>
+ </a>
+ </nav>
+</aside>

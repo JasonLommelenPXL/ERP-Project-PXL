@@ -1,0 +1,33 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html { position: relative; min-height:100%; }
+
+/* Sticky footer layout: body as flex column */
+body {
+ margin:0; /* override previous margin-bottom */
+ min-height:100vh;
+ display: flex;
+ flex-direction: column;
+}
+
+/* Main app shell should take remaining space */
+.container-fluid.erp-shell {
+ flex:10 auto;
+}
+
+/* Footer sits at the bottom after content */
+footer.footer, .footer {
+ margin-top: auto;
+}

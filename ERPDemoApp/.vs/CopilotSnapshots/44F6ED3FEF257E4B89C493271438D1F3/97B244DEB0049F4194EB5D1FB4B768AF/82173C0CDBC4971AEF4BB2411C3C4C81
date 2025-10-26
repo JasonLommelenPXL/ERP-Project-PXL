@@ -1,0 +1,10 @@
+﻿@ERPDemoApp_HostAddress = https://localhost:7086
+
+POST {{ERPDemoApp_HostAddress}}/todoitems
+Content-Type: application/json
+
+{
+  "name": "walk dog",
+  "isComplete": true
+}
+###

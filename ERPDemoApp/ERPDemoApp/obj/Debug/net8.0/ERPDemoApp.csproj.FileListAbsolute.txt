@@ -1,0 +1,88 @@
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\appsettings.json
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\ERPDemoApp.staticwebassets.runtime.json
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\ERPDemoApp.staticwebassets.endpoints.json
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\ERPDemoApp.exe
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\ERPDemoApp.deps.json
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\ERPDemoApp.runtimeconfig.json
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\ERPDemoApp.dll
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\ERPDemoApp.pdb
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.AssemblyInfoInputs.cache
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.AssemblyInfo.cs
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.csproj.CoreCompileInputs.cache
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.RazorAssemblyInfo.cache
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.RazorAssemblyInfo.cs
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.sourcelink.json
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\scopedcss\bundle\ERPDemoApp.styles.css
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\scopedcss\projectbundle\ERPDemoApp.bundle.scp.css
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.dll
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\refint\ERPDemoApp.dll
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.pdb
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.genruntimeconfig.cache
+C:\Users\jason\Documents\Visual Studio CSharp Core\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ref\ERPDemoApp.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\appsettings.json
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\ERPDemoApp.staticwebassets.endpoints.json
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\ERPDemoApp.staticwebassets.runtime.json
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\ERPDemoApp.exe
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\ERPDemoApp.deps.json
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\ERPDemoApp.runtimeconfig.json
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\ERPDemoApp.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\ERPDemoApp.pdb
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.csproj.AssemblyReference.cache
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.AssemblyInfoInputs.cache
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.AssemblyInfo.cs
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.csproj.CoreCompileInputs.cache
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.RazorAssemblyInfo.cache
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.RazorAssemblyInfo.cs
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.sourcelink.json
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\scopedcss\bundle\ERPDemoApp.styles.css
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\scopedcss\projectbundle\ERPDemoApp.bundle.scp.css
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.csproj.Up2Date
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\refint\ERPDemoApp.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.pdb
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.genruntimeconfig.cache
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ref\ERPDemoApp.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\ERPDemoApp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\jason\Documents\Visual-Studio-Projecten\ERPDemoApp\ERPDemoApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
