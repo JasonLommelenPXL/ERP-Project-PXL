@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "ERPDemoApp.Program\u002B\u003C\u003Ec",
-    "Method": "\u003CMain\u003Eb__0_1",
+    "Method": "\u003CMain\u003Eb__0_8",
     "RelativePath": "healthz",
     "HttpMethod": "GET",
     "IsController": false,
@@ -17,7 +17,7 @@
   },
   {
     "ContainingType": "ERPDemoApp.Program\u002B\u003C\u003Ec",
-    "Method": "\u003CMain\u003Eb__0_2",
+    "Method": "\u003CMain\u003Eb__0_9",
     "RelativePath": "todoitems",
     "HttpMethod": "GET",
     "IsController": false,
@@ -35,7 +35,7 @@
   },
   {
     "ContainingType": "ERPDemoApp.Program\u002B\u003C\u003Ec",
-    "Method": "\u003CMain\u003Eb__0_5",
+    "Method": "\u003CMain\u003Eb__0_12",
     "RelativePath": "todoitems",
     "HttpMethod": "POST",
     "IsController": false,
@@ -57,7 +57,7 @@
   },
   {
     "ContainingType": "ERPDemoApp.Program\u002B\u003C\u003Ec",
-    "Method": "\u003CMain\u003Eb__0_4",
+    "Method": "\u003CMain\u003Eb__0_11",
     "RelativePath": "todoitems/{id}",
     "HttpMethod": "GET",
     "IsController": false,
@@ -79,7 +79,7 @@
   },
   {
     "ContainingType": "ERPDemoApp.Program\u002B\u003C\u003Ec",
-    "Method": "\u003CMain\u003Eb__0_6",
+    "Method": "\u003CMain\u003Eb__0_13",
     "RelativePath": "todoitems/{id}",
     "HttpMethod": "PUT",
     "IsController": false,
@@ -106,7 +106,7 @@
   },
   {
     "ContainingType": "ERPDemoApp.Program\u002B\u003C\u003Ec",
-    "Method": "\u003CMain\u003Eb__0_7",
+    "Method": "\u003CMain\u003Eb__0_14",
     "RelativePath": "todoitems/{id}",
     "HttpMethod": "DELETE",
     "IsController": false,
@@ -128,7 +128,7 @@
   },
   {
     "ContainingType": "ERPDemoApp.Program\u002B\u003C\u003Ec",
-    "Method": "\u003CMain\u003Eb__0_3",
+    "Method": "\u003CMain\u003Eb__0_10",
     "RelativePath": "todoitems/complete",
     "HttpMethod": "GET",
     "IsController": false,

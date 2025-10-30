@@ -1,0 +1,176 @@
+﻿/* =========================
+   HERO
+   ========================= */
+.od-hero {
+    position: relative;
+    background: #fff;
+}
+
+.od-hero-title {
+    font-size: clamp(2.1rem, 2.2rem + 1.6vw, 3.4rem);
+    font-weight: 800;
+}
+
+    .od-hero-title em {
+        background: linear-gradient(90deg, #ffb703, #ffd166);
+        padding: .05em .25em;
+        font-style: normal;
+        border-radius: .35rem;
+    }
+
+.od-hero-card {
+    border: 1px solid #eef0f5;
+}
+
+.od-hero-bg {
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 120px;
+    background: radial-gradient(70% 60% at 50% 0%, #f3f4f9 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* =========================
+   TOOLBAR & APP GRID
+   ========================= */
+.od-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.od-apps {
+    background: #f7f8fb;
+}
+
+/* =========================
+   APP CARDS — Odoo-style
+   ========================= */
+/* Kleuren per categorie */
+.od-app[data-cat="sales"] {
+    --app-color: #EF4444;
+}
+
+.od-app[data-cat="operations"] {
+    --app-color: #10B981;
+}
+
+.od-app[data-cat="finance"] {
+    --app-color: #F59E0B;
+}
+
+.od-app[data-cat="hr"] {
+    --app-color: #8B5CF6;
+}
+
+.od-app[data-cat="website"] {
+    --app-color: #0EA5E9;
+}
+
+/* Basis kaart */
+.od-app {
+    --app-color: #64748b; /* fallback */
+    --app-shadow: 0 8px 24px rgba(2,6,23,.06);
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #eef0f5;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: box-shadow .15s ease, transform .08s ease, border-color .15s ease;
+    box-shadow: var(--app-shadow);
+}
+    /* Geen oude header-balk meer */
+    .od-app::before {
+        display: none;
+    }
+
+    /* Inhoud: icon links, tekst rechts */
+    .od-app .card-body {
+        padding: 14px 18px;
+        display: grid;
+        grid-template-columns: 56px 1fr;
+        grid-template-rows: auto auto;
+        grid-column-gap: 14px;
+        align-items: center;
+        text-align: left;
+    }
+
+/* Icon-badge */
+.od-app__icon {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    background: var(--app-color);
+    color: #fff;
+    font-size: 1.25rem;
+    box-shadow: 0 6px 18px rgba(2,6,23,.12);
+}
+
+/* Titel en beschrijving */
+.od-app__title {
+    grid-column: 2;
+    grid-row: 1;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.2;
+}
+
+.od-app__desc {
+    grid-column: 2;
+    grid-row: 2;
+    color: #6b7280;
+    font-size: .925rem;
+    line-height: 1.35;
+}
+
+/* Hover / focus / selected */
+.od-app:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(2,6,23,.10);
+}
+
+.od-app:has(.od-app__check:focus-visible) {
+    outline: 3px solid color-mix(in srgb, var(--app-color) 55%, #fff);
+    outline-offset: 3px;
+}
+
+.od-app__check:checked ~ * {
+    border-color: color-mix(in srgb, var(--app-color) 45%, #eef0f5);
+    box-shadow: 0 18px 44px color-mix(in srgb, var(--app-color) 20%, transparent);
+}
+
+    .od-app__check:checked ~ *::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        width: 12px;
+        height: 12px;
+        border-radius: 999px;
+        background: var(--app-color);
+        box-shadow: 0 0 0 3px #fff, 0 6px 16px rgba(2,6,23,.25);
+    }
+
+/* Compactere variant op kleine schermen */
+@media (max-width: 576px) {
+    .od-app .card-body {
+        grid-template-columns: 48px 1fr;
+        grid-column-gap: 12px;
+        padding: 12px 14px;
+    }
+
+    .od-app__icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        font-size: 1.1rem;
+    }
+}

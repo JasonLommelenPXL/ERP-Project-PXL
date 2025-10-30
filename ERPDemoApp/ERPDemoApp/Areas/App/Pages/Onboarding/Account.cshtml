@@ -1,0 +1,74 @@
+@page
+@model ERPDemoApp.Areas.App.Pages.Onboarding.AccountModel
+@{
+ ViewData["Title"] = "Account aanmaken";
+}
+@section Styles {
+ <link rel="stylesheet" href="~/css/pages/startnow.css" asp-append-version="true" />
+}
+<section class="sn-wrap py-4 py-md-5">
+ <div class="container">
+ <div class="sn-header d-flex align-items-center gap-3 mb-3">
+ <span class="sn-icon"><i class="bi bi-person-plus"></i></span>
+ <div>
+ <h1 class="sn-title mb-0">Maak je account</h1>
+ <p class="sn-sub mb-0">Kies een loginmethode voor @Model.Tenant</p>
+ </div>
+ </div>
+
+ <div class="sn-card bg-white border">
+ <form method="post">
+ <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+ <input type="hidden" asp-for="Tenant" />
+ <div class="row g-3 g-md-4">
+ <div class="col-12 col-md-6">
+ <label class="form-label fw-semibold" for="Email">E-mail</label>
+ <input class="form-control sn-control" asp-for="Email" placeholder="jij@bedrijf.be" required />
+ </div>
+
+ <div class="col-12 col-md-6">
+ <label class="form-label fw-semibold">Loginmethode</label>
+ <div class="d-flex gap-3 align-items-center">
+ <div class="form-check">
+ <input class="form-check-input" type="radio" asp-for="Mode" value="password" id="m1" checked>
+ <label class="form-check-label" for="m1">Wachtwoord kiezen</label>
+ </div>
+ <div class="form-check">
+ <input class="form-check-input" type="radio" asp-for="Mode" value="magic" id="m2">
+ <label class="form-check-label" for="m2">Wachtwoord via e-mail (magic link)</label>
+ </div>
+ </div>
+ </div>
+
+ <div class="col-12 col-md-6 js-password">
+ <label class="form-label fw-semibold" for="Password">Wachtwoord</label>
+ <input class="form-control sn-control" asp-for="Password" type="password" placeholder="Kies een sterk wachtwoord" />
+ </div>
+ </div>
+
+ <div class="sn-card__footer d-flex flex-wrap gap-2 align-items-center justify-content-between">
+ <div class="sn-legal small">Je account geldt enkel voor <strong>@Model.Tenant</strong>.</div>
+ <div class="d-flex gap-2">
+ <a href="javascript:history.back()" class="btn sn-btn-back"><i class="bi bi-chevron-left me-1"></i> Terug</a>
+ <button class="btn erp-btn-cta sn-btn-cta" type="submit">Verder</button>
+ </div>
+ </div>
+ </form>
+ </div>
+ </div>
+</section>
+
+@section Scripts {
+<script>
+ (function(){
+ const radios = document.querySelectorAll('input[name="Mode"]');
+ const pwd = document.querySelector('.js-password');
+ const toggle = () => {
+ const mode = document.querySelector('input[name="Mode"]:checked').value;
+ pwd.style.display = mode === 'password' ? '' : 'none';
+ };
+ radios.forEach(r => r.addEventListener('change', toggle));
+ toggle();
+ })();
+</script>
+}

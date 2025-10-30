@@ -1,0 +1,177 @@
+﻿/* =======================================================================
+   ERP Marketing Nav — white, sticky, no blur (complete)
+   ======================================================================= */
+
+:root {
+    --nav-bg-solid: #ffffff;
+    --nav-ink: #0f172a; /* slate-900 */
+    --nav-ink-muted: #475569; /* slate-600 */
+    --nav-border: #e6eaf2;
+    --nav-shadow: 0 6px 24px rgba(2,6,23,.08);
+    --nav-radius: 14px;
+    /* CTA gradient stops */
+    --btn-cta-from: #7c3aed;
+    --btn-cta-to: #a855f7;
+    /* Ghost button border */
+    --btn-ghost-brd: #e6eaf2;
+}
+
+/* Sticky witte navbar (zonder blur) */
+.erp-nav {
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    background: var(--nav-bg-solid);
+    border-bottom: 1px solid var(--nav-border);
+    transition: box-shadow .2s ease, border-color .2s ease, background .2s ease;
+}
+
+    /* Subtiele schaduw na scroll (class via mini-script) */
+    .erp-nav.is-scrolled {
+        box-shadow: var(--nav-shadow);
+    }
+
+    /* Binnenruimte */
+    .erp-nav .container {
+        padding-top: .35rem;
+        padding-bottom: .35rem;
+    }
+
+/* Brand */
+.erp-nav__brand {
+    font-weight: 900;
+    letter-spacing: -.02em;
+    color: var(--nav-ink) !important;
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    text-decoration: none;
+}
+
+.erp-nav__dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    display: inline-block;
+    background: radial-gradient(120% 120% at 20% 0%, #6366f1 0%, #8b5cf6 65%, #9f7aea 100%);
+    box-shadow: 0 8px 18px rgba(99,102,241,.35);
+}
+
+/* Toggler */
+.erp-nav__toggler {
+    border: 0;
+    box-shadow: none !important;
+}
+
+/* Menu-links (gecentreerd op lg+) */
+.erp-nav__menu .nav-link {
+    color: var(--nav-ink-muted) !important;
+    font-weight: 600;
+    padding: .6rem .9rem;
+    border-radius: .65rem;
+    transition: background .15s ease, color .15s ease, transform .06s ease;
+}
+
+    .erp-nav__menu .nav-link:hover {
+        color: var(--nav-ink) !important;
+        background: rgba(2,6,23,.04);
+        transform: translateY(-1px);
+    }
+
+    .erp-nav__menu .nav-link.active,
+    .erp-nav__menu .nav-link[aria-current="page"] {
+        color: var(--nav-ink) !important;
+        background: rgba(2,6,23,.06);
+    }
+
+/* Right actions — Ghost button */
+.erp-btn-ghost {
+    --_h: 44px;
+    height: var(--_h);
+    padding: .45rem .9rem;
+    font-weight: 700;
+    border-radius: .8rem;
+    background: #fff;
+    border: 1px solid var(--btn-ghost-brd);
+    color: var(--nav-ink);
+    transition: transform .06s ease, box-shadow .15s ease, background .15s ease;
+}
+
+    .erp-btn-ghost:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 18px rgba(2,6,23,.07);
+        background: #f9fbff;
+    }
+
+/* Right actions — CTA button (ALTIJD witte tekst) */
+.erp-btn-cta {
+    --_h: 44px;
+    height: var(--_h);
+    padding: .45rem 1rem;
+    font-weight: 800;
+    border-radius: .9rem;
+    border: 0;
+    /* Forceer wit op alle states (overrulet Bootstrap btn vars) */
+    --bs-btn-color: #fff;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-active-color: #fff;
+    color: #fff !important;
+    background: linear-gradient(90deg, var(--btn-cta-from) 0%, var(--btn-cta-to) 100%);
+    box-shadow: 0 12px 28px rgba(124,58,237,.35);
+    transition: transform .06s ease, box-shadow .18s ease, background .15s ease, filter .15s ease;
+}
+
+    /* Hover: enkel de achtergrond donkerder, tekst blijft wit */
+    .erp-btn-cta:hover,
+    .erp-btn-cta:focus {
+        color: #fff !important;
+        background: linear-gradient( 90deg, color-mix(in srgb, var(--btn-cta-from) 88%, #000) 0%, color-mix(in srgb, var(--btn-cta-to) 88%, #000) 100% );
+        transform: translateY(-1px);
+        box-shadow: 0 18px 40px rgba(124,58,237,.42);
+        filter: none;
+    }
+
+    /* Active: klik-feedback, nog steeds wit */
+    .erp-btn-cta:active {
+        color: #fff !important;
+        transform: translateY(0);
+        box-shadow: 0 10px 22px rgba(124,58,237,.30);
+    }
+
+/* (Optioneel) Minder 'glow' standaard, iets meer op hover */
+.erp-btn-cta {
+    box-shadow: 0 10px 26px rgba(124,58,237,.28);
+}
+
+    .erp-btn-cta:hover {
+        box-shadow: 0 16px 36px rgba(124,58,237,.38);
+    }
+
+/* Collapsed spacing */
+@media (max-width: 991.98px) {
+    .erp-nav__menu .nav-link {
+        padding: .55rem .35rem;
+        border-radius: .55rem;
+    }
+
+    .erp-nav .container {
+        padding-top: .25rem;
+        padding-bottom: .25rem;
+    }
+
+    .erp-nav__actions {
+        padding-top: .35rem;
+    }
+}
+
+/* Dark scheme nuance (navbar blijft wit zoals gevraagd) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --btn-ghost-brd: #d6dae4;
+    }
+
+    .erp-btn-ghost {
+        background: #fff;
+        color: #0f172a;
+    }
+}

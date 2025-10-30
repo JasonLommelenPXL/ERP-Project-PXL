@@ -1,0 +1,386 @@
+﻿/* =========================================================
+   Admin – Companies (overzicht + filters + tabel)
+   ========================================================= */
+
+:root {
+    /* Leunt op je algemene tokens; val terug als ze ontbreken */
+    --ad-text: var(--text, #111827);
+    --ad-text-dim: var(--text-dim, #6b7280);
+    --ad-surface: var(--surface, #fff);
+    --ad-border: var(--border, #e5e7eb);
+    --ad-accent: var(--accent, #6366f1);
+    --ad-accent-2: var(--accent-2, #8b5cf6);
+    --ad-radius: 14px;
+    --ad-shadow: 0 6px 20px rgba(0,0,0,.06);
+}
+
+/* Page header */
+.admin-page {
+    padding: 1rem 1.25rem 2rem;
+}
+
+.admin-page__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: .25rem 0 1rem;
+}
+
+.admin-page__title {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+}
+
+    .admin-page__title i {
+        font-size: 1.6rem;
+        color: var(--ad-accent);
+    }
+
+    .admin-page__title h1 {
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: var(--ad-text);
+    }
+
+    .admin-page__title .muted {
+        color: var(--ad-text-dim);
+        margin: 0;
+    }
+
+.admin-page__actions {
+    display: flex;
+    gap: .5rem;
+}
+
+/* Buttons */
+.admin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    min-height: 38px;
+    padding: .5rem .8rem;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--ad-text);
+    text-decoration: none;
+    border: 1px solid var(--ad-border);
+    transition: transform .06s, box-shadow .15s, border-color .15s;
+}
+
+    .admin-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: var(--ad-shadow);
+        border-color: #d8dbe6;
+    }
+
+.admin-btn--primary {
+    background: linear-gradient(90deg, var(--ad-accent), var(--ad-accent-2));
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 10px 24px rgba(99,102,241,.35);
+}
+
+    .admin-btn--primary:hover {
+        box-shadow: 0 16px 32px rgba(99,102,241,.45);
+        filter: brightness(.98);
+    }
+
+.admin-btn--danger {
+    border-color: #fecaca;
+    background: #fff5f5;
+    color: #b91c1c;
+}
+
+.admin-btn--current {
+    background: #eef2ff;
+    border-color: #c7d2fe;
+    color: #4338ca;
+}
+
+/* Filters */
+.admin-filters {
+    margin: 0 0 1rem;
+    padding: .9rem;
+    border: 1px solid var(--ad-border);
+    border-radius: 12px;
+    background: linear-gradient(180deg,#fff, #fafbff 70%);
+    box-shadow: var(--ad-shadow);
+}
+
+.admin-filters__row {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0,1fr));
+    gap: .75rem;
+}
+
+.admin-field {
+    grid-column: span 3;
+}
+
+.admin-field--grow {
+    grid-column: span 2;
+}
+
+.admin-field label {
+    display: block;
+    font-weight: 700;
+    font-size: .9rem;
+    margin: 0 0 .35rem;
+    color: var(--ad-text);
+}
+
+.admin-input-icon {
+    position: relative;
+}
+
+    .admin-input-icon i {
+        position: absolute;
+        left: .65rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--ad-text-dim);
+    }
+
+    .admin-input-icon input {
+        padding-left: 2rem !important;
+    }
+
+.admin-field input,
+.admin-field select {
+    width: 100%;
+    min-height: 42px;
+    border: 1px solid var(--ad-border);
+    border-radius: 10px;
+    padding: .55rem .7rem;
+    background: #fff;
+    color: var(--ad-text);
+    transition: border-color .15s, box-shadow .15s, background-color .15s;
+    outline: none;
+}
+
+.admin-field select {
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+    background-position: calc(100% - 18px) calc(1.05em), calc(100% - 13px) calc(1.05em);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+}
+
+    .admin-field input:focus, .admin-field select:focus {
+        border-color: color-mix(in srgb, var(--ad-accent) 60%, #fff);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--ad-accent) 25%, transparent);
+    }
+
+.admin-filters__buttons {
+    grid-column: span 2;
+    align-self: end;
+    display: flex;
+    gap: .5rem;
+}
+
+/* Bulk actions */
+.admin-bulk {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem .75rem;
+    border: 1px dashed var(--ad-border);
+    border-radius: 10px;
+    margin: 0 0 .75rem;
+}
+
+.admin-bulk__left {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.admin-bulk__sep {
+    width: 1px;
+    height: 24px;
+    background: var(--ad-border);
+    margin: 0 .25rem;
+}
+
+.admin-check input {
+    width: 16px;
+    height: 16px;
+}
+
+/* Table */
+.admin-tablewrap {
+    border: 1px solid var(--ad-border);
+    border-radius: 12px;
+    overflow: auto;
+    background: #fff;
+    box-shadow: var(--ad-shadow);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: .95rem;
+}
+
+    .admin-table thead th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: #f8fafc;
+        text-align: left;
+        font-weight: 700;
+        color: var(--ad-text);
+        border-bottom: 1px solid var(--ad-border);
+        padding: .7rem .75rem;
+    }
+
+    .admin-table td {
+        border-bottom: 1px solid var(--ad-border);
+        padding: .65rem .75rem;
+        color: var(--ad-text);
+        vertical-align: middle;
+    }
+
+    .admin-table tbody tr:hover {
+        background: #fafbff;
+    }
+
+.small {
+    font-size: .82rem;
+}
+
+.muted {
+    color: var(--ad-text-dim);
+}
+
+.admin-link {
+    color: var(--ad-accent);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+    .admin-link:hover {
+        text-decoration: underline;
+    }
+
+.admin-rowactions {
+    display: flex;
+    gap: .25rem;
+}
+
+.admin-iconbtn {
+    display: inline-grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid var(--ad-border);
+    background: #fff;
+    color: var(--ad-text);
+}
+
+    .admin-iconbtn:hover {
+        box-shadow: var(--ad-shadow);
+        transform: translateY(-1px);
+    }
+
+.admin-iconbtn--danger {
+    color: #b91c1c;
+    border-color: #fecaca;
+    background: #fff5f5;
+}
+
+.admin-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: .2rem .5rem;
+    border-radius: 999px;
+    font-size: .78rem;
+    line-height: 1;
+    color: #111827;
+    background: #eef2ff;
+    border: 1px solid #e0e7ff;
+}
+
+.admin-badge--accent {
+    color: #fff;
+    background: linear-gradient(90deg, var(--ad-accent), var(--ad-accent-2));
+    border-color: transparent;
+}
+
+.admin-badge--success {
+    color: #065f46;
+    background: #d1fae5;
+    border-color: #a7f3d0;
+}
+
+.admin-badge--warn {
+    color: #92400e;
+    background: #fef3c7;
+    border-color: #fde68a;
+}
+
+.admin-badge--danger {
+    color: #7f1d1d;
+    background: #fee2e2;
+    border-color: #fecaca;
+}
+
+/* Pagination */
+.admin-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: .75rem 0 0;
+}
+
+.admin-pager {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+}
+
+.admin-ellipsis {
+    padding: 0 .25rem;
+    color: var(--ad-text-dim);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .admin-filters__row {
+        grid-template-columns: repeat(6, minmax(0,1fr));
+    }
+
+    .admin-field {
+        grid-column: span 3;
+    }
+
+    .admin-field--grow {
+        display: none;
+    }
+}
+
+@media (max-width: 820px) {
+    .admin-page__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .admin-filters__row {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+
+    .admin-field {
+        grid-column: span 2;
+    }
+
+    .admin-filters__buttons {
+        grid-column: span 2;
+        justify-content: flex-start;
+    }
+}

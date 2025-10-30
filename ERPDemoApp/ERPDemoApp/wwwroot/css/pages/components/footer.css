@@ -1,0 +1,195 @@
+﻿/* =========================
+   FOOTER
+   ========================= */
+.site-footer {
+    --sf-bg: var(--surface);
+    --sf-bg-muted: var(--surface-muted);
+    --sf-ink: var(--text);
+    --sf-ink-dim: var(--text-dim);
+    --sf-brd: var(--border);
+    --sf-radius: var(--card-radius);
+    --sf-shadow: var(--card-shadow);
+    color: var(--sf-ink);
+    background: var(--sf-bg);
+    margin-top: auto; /* sticky footer ondersteuning via body flex */
+}
+
+/* Top-sectie */
+.site-footer__top {
+    padding: 2.5rem 0 2rem;
+    background: var(--sf-bg);
+    border-top: 1px solid var(--sf-brd);
+}
+
+/* Bottom/Legal bar */
+.site-footer__bottom {
+    border-top: 1px solid var(--sf-brd);
+    padding: .9rem 0;
+    background: var(--sf-bg);
+}
+
+/* Brand */
+.site-footer__brand {
+    font-weight: 900;
+    letter-spacing: -.02em;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    color: var(--sf-ink);
+}
+
+.site-footer__dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 6px;
+    display: inline-block;
+    background: radial-gradient(120% 120% at 20% 0%, var(--accent) 0%, var(--accent-2) 65%, #9f7aea 100%);
+    box-shadow: 0 6px 14px rgba(99,102,241,.28);
+}
+
+.site-footer__tagline {
+    color: var(--sf-ink-dim);
+    margin: .6rem 0 1.1rem;
+}
+
+/* Titels/kolomkoppen */
+.site-footer__title {
+    font-weight: 800;
+    color: var(--sf-ink);
+    margin: .25rem 0 .8rem;
+    letter-spacing: .01em;
+}
+
+/* Linklijsten */
+.site-footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem;
+}
+
+    .site-footer__list li {
+        margin: .35rem 0;
+    }
+
+    .site-footer__list a {
+        color: var(--sf-ink-dim);
+        text-decoration: none;
+        border-radius: .5rem;
+        padding: .15rem .25rem;
+        transition: color .12s ease, background-color .12s ease, transform .06s ease;
+    }
+
+        .site-footer__list a:hover {
+            color: var(--sf-ink);
+            background: rgba(2,6,23,.04);
+            transform: translateX(1px);
+        }
+
+/* Socials */
+.site-footer__social {
+    display: flex;
+    gap: .5rem;
+}
+
+.sf-social {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--sf-brd);
+    border-radius: .75rem;
+    color: var(--sf-ink);
+    background: var(--sf-bg);
+    box-shadow: 0 6px 16px rgba(17,24,39,.06);
+    transition: transform .06s ease, box-shadow .15s ease, border-color .12s ease, background .12s ease;
+}
+
+    .sf-social:hover {
+        transform: translateY(-1px);
+        border-color: color-mix(in srgb, var(--accent) 40%, var(--sf-brd));
+        box-shadow: 0 10px 24px rgba(17,24,39,.10);
+        background: var(--sf-bg-muted);
+    }
+
+/* Nieuwsbrief */
+.site-footer__newsletter {
+    margin-top: .75rem;
+}
+
+    .site-footer__newsletter .form-label {
+        font-weight: 700;
+        color: var(--sf-ink);
+        margin-bottom: .35rem;
+    }
+
+.site-footer__input .form-control {
+    border-color: var(--sf-brd);
+    border-radius: .8rem 0 0 .8rem;
+}
+
+.site-footer__input .btn {
+    border-radius: 0 .8rem .8rem 0;
+}
+
+.site-footer__newsletter .form-text {
+    color: var(--sf-ink-dim);
+    margin-top: .35rem;
+}
+
+/* Legal links rechts onderaan */
+.site-footer__legal {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+    .site-footer__legal a {
+        color: var(--sf-ink-dim);
+        text-decoration: none;
+    }
+
+        .site-footer__legal a:hover {
+            color: var(--sf-ink);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+/* Layout tweaks voor kleinere schermen */
+@media (max-width: 991.98px) {
+    .site-footer__top {
+        padding: 2rem 0 1.25rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .site-footer__social {
+        margin-bottom: .5rem;
+    }
+
+    .site-footer__legal {
+        gap: .75rem;
+    }
+}
+
+/* Dark mode nuance: behoud structuur, verhoog contrast */
+@media (prefers-color-scheme: dark) {
+    .site-footer {
+        --sf-bg: #0f1629;
+        --sf-bg-muted: #0b1220;
+        --sf-ink: #e5e7eb;
+        --sf-ink-dim: #94a3b8;
+        --sf-brd: #1f2a44;
+    }
+
+    .sf-social {
+        background: var(--sf-bg);
+        border-color: var(--sf-brd);
+    }
+
+    .site-footer__list a:hover {
+        background: rgba(255,255,255,.05);
+    }
+}

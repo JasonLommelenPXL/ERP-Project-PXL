@@ -1,0 +1,33 @@
+@* Shared layout for Admin area *@
+@* Now includes the sidebar component from Areas/Admin/Pages/Components/_Sidebar.cshtml *@
+<!doctype html>
+<html lang="nl">
+<head>
+ <meta charset="utf-8" />
+ <title>@ViewData["Title"] - Admin</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+ <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+ <link rel="stylesheet" href="~/css/admin/components/adminsidebar.css" asp-append-version="true" />
+ @RenderSection("Styles", required: false)
+ <style>
+ :root { --topbar-h:0px; }
+ html, body.admin-shell { height:100%; }
+ body.admin-shell { display:flex; flex-direction:row; min-height:100dvh; padding-top:0!important; margin:0!important; }
+ body.admin-shell > .d-flex { flex:11 auto; min-height:100dvh; }
+ body.admin-shell main { flex:11 auto; min-height:100dvh; }
+ .admin-sidebar { position:sticky; top:0; }
+ body.admin-shell main > :first-child { margin-top:0; }
+ </style>
+</head>
+<body class="admin-shell">
+ <div class="d-flex w-100">
+ @await Html.PartialAsync("~/Areas/Admin/Pages/Components/_Sidebar.cshtml")
+ <main class="flex-fill p-3">
+ @RenderBody()
+ </main>
+ </div>
+ <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+ @RenderSection("Scripts", required: false)
+</body>
+</html>

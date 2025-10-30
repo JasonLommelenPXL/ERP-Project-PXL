@@ -1,6 +1,16 @@
 /* =========================
-   site.css (clean baseline)
+   site.css (gecombineerde baseline + thema)
    ========================= */
+
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
 /* Basis typografie */
 html {
@@ -13,11 +23,76 @@ html {
     }
 }
 
-/* Focus rings (zoals in het template) */
+/* Design tokens (thema) */
 :root {
+    /* Tekst & oppervlakken */
+    --text: #111827;
+    --text-dim: #6b7280;
+    --surface: #ffffff;
+    --surface-muted: #f7f9fc;
+    --border: #e5e7eb;
+    /* Accentkleuren */
+    --accent: #6366f1; /* indigo */
+    --accent-2: #8b5cf6; /* purple */
+    /* Layout */
+    --topbar-h: 56px;
+    --sidebar-w: 260px;
+    --sidebar-bg: #f3f4f6;
+    /* Cards */
+    --card-radius: 14px;
+    --card-shadow: 0 6px 20px rgba(0,0,0,.06);
+    /* Topbar (fallbacks voor navbar.css) */
+    --topbar-bg: #1f2937;
+    --topbar-text: #f9fafb;
+    --topbar-text-muted: #e5e7eb;
+    /* Aliases voor oudere --erp-* variabelen (compat) */
+    --erp-card-bg: var(--surface-muted);
+    --erp-card-border: var(--border);
+    --erp-text: var(--text);
+    --erp-muted: var(--text-dim);
+    --erp-radius: var(--card-radius);
+    --erp-shadow: var(--card-shadow);
+    --erp-card-min-h: 120px;
+    --erp-accent: var(--accent);
+    --erp-accent-2: var(--accent-2);
+    --erp-ink: var(--text);
+    --erp-ink-dim: var(--text-dim);
+    --erp-brd: var(--border);
+    --erp-elev: 0 10px 24px rgba(17,24,39,.08);
+    --content-bg: var(--surface);
+    --sidebar-text: var(--text);
+    --sidebar-muted: var(--text-dim);
+    --sidebar-active: rgba(0,0,0,.06);
+    /* Focus ring uit het template */
     --focus-ring: #258cfb;
 }
 
+/* Body layout (flex voor sticky footer) */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer in normale flow */
+.footer {
+    position: static;
+    width: 100%;
+    background: #fff;
+    margin-top: auto;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: none;
+    }
+
+/* Form focus (bootstrap template) */
 .btn:focus,
 .btn:active:focus,
 .btn-link.nav-link:focus,
@@ -27,47 +102,22 @@ html {
     outline: 0;
 }
 
-/* --------- BELANGRIJK: verwijder oud sticky-footer patroon ---------
-   Geen absolute footer meer; we gebruiken de flex layout in _Layout.cshtml.
-   Daarom GEEN html{position:relative; min-height:100%} en
-   GEEN body{margin-bottom:60px}.
--------------------------------------------------------------------- */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-/* Body zonder extra ondermarge (oude patroon uitgeschakeld) */
-body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Footer: geen absolute positioning, gewoon normaal document-flow */
-.footer {
-    position: static;
-    width: 100%;
-    line-height: 60px;
-    background: #fff;
-    margin-top: auto;
-}
-
-/* Kleine quality-of-life tweaks (optioneel) */
-a {
-    text-decoration: none;
-}
-
-    a:hover {
-        text-decoration: none;
-    }
-
-/* Zorg dat hash-navigatie niet onder de topbar valt (werkt samen met erp.css) */
+/* Helpers */
 [id] {
-    scroll-margin-top: 64px;
+    scroll-margin-top: calc(var(--topbar-h) + .5rem);
 }
 
-/* zorg dat de shell de kolomruimte krijgt */
-.container-fluid.erp-shell { flex:11 auto; }
+/* Shell container: geen horizontale padding en meerekken */
+.container-fluid.erp-shell {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    flex: 1 1 auto; /* neemt resterende hoogte/ruimte in */
+}
+
+/* Reduce motion respecteren */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}

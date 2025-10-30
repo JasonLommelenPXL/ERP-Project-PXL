@@ -1,0 +1,14 @@
+@page "/admin/companies"
+@model ERPDemoApp.Areas.Admin.Pages.Companies.IndexModel
+@{
+ ViewData["Title"] = "Bedrijven";
+}
+
+@section Styles {
+ <link rel="stylesheet" href="~/css/admin/components/adminsidebar.css" asp-append-version="true" />
+ <link rel="stylesheet" href="~/css/admin/pages/companies.css" asp-append-version="true" />
+}
+
+<section class="admin-page admin-companies">
+ <partial name="~/Pages/Admin/Frontend/Companies.cshtml" />
+</section>

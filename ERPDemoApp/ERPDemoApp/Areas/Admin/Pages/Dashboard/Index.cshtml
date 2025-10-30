@@ -1,0 +1,22 @@
+@page "/admin"
+@model ERPDemoApp.Areas.Admin.Pages.Dashboard.IndexModel
+@{
+ ViewData["Title"] = "Admin";
+}
+
+@section Styles {
+ <link rel="stylesheet" href="~/css/admin/components/adminsidebar.css" asp-append-version="true" />
+}
+
+<h1 class="mt-3 mb-4">Admin dashboard</h1>
+
+<div class="row g-4">
+ <div class="col-12 col-md-6 col-xl-4">
+ <div class="card shadow-sm">
+ <div class="card-body">
+ <h5 class="card-title">Statistieken</h5>
+ <p class="card-text text-muted">Korte samenvatting van systeemstatus.</p>
+ </div>
+ </div>
+ </div>
+</div>

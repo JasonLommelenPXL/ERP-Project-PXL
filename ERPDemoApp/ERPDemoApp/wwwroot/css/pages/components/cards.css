@@ -1,0 +1,162 @@
+/* =========================================================
+   Cards + icon tiles (dashboard & algemene tegels)
+   ========================================================= */
+
+.erp-title {
+    font-family: "Segoe UI", system-ui, -apple-system;
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 1.5rem .5rem 1rem;
+    color: var(--text);
+}
+
+.erp-section {
+    margin: 2rem .5rem;
+}
+
+/* gelijke hoogte binnen bootstrap-rijen */
+.row.equal-cards > [class*="col"] {
+    display: flex;
+}
+
+.row.equal-cards .erp-card {
+    flex: 1 1 auto;
+}
+
+/* Card */
+.erp-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--erp-card-bg);
+    border: 1px solid var(--erp-card-border);
+    border-radius: var(--erp-radius);
+    padding: .9rem 1.25rem;
+    min-height: var(--erp-card-min-h);
+    color: var(--erp-text);
+    text-decoration: none;
+    box-shadow: var(--erp-shadow);
+    transition: transform .15s ease, box-shadow .15s ease;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+    .erp-card:hover {
+        transform: translateY(-2px) translateZ(0);
+        box-shadow: 0 10px 24px rgba(0,0,0,.12);
+    }
+
+    /* Titel & body in de card */
+    .erp-card h3 {
+        margin: 0 0 .25rem 0;
+        font-size: 1.125rem;
+        font-weight: 700;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .erp-card p {
+        margin: 0;
+        color: var(--erp-muted);
+        line-height: 1.25;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+
+    /* Icon tile in de card */
+    .erp-card .erp-icon {
+        width: 56px;
+        height: 56px;
+        min-width: 56px;
+        min-height: 56px;
+        aspect-ratio: 1/1;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        line-height: 0;
+        overflow: hidden;
+    }
+
+.erp-icon > svg,
+.erp-icon > i,
+.erp-icon > img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    line-height: 0;
+    font-size: 24px;
+}
+
+/* Icon kleuren */
+.erp-icon-orange {
+    background: #f59e0b;
+}
+
+.erp-icon-amber {
+    background: #f59e0b;
+}
+
+.erp-icon-green {
+    background: #10b981;
+}
+
+.erp-icon-teal {
+    background: #14b8a6;
+}
+
+.erp-icon-lime {
+    background: #84cc16;
+}
+
+.erp-icon-blue {
+    background: #3b82f6;
+}
+
+.erp-icon-cyan {
+    background: #06b6d4;
+}
+
+.erp-icon-yellow {
+    background: #fbbf24;
+}
+
+.erp-icon-pink {
+    background: #ec4899;
+}
+
+.erp-icon-rose {
+    background: #f43f5e;
+}
+
+.erp-icon-red {
+    background: #ef4444;
+}
+
+.erp-icon-purple {
+    background: #8b5cf6;
+}
+
+.erp-icon-violet {
+    background: #7c3aed;
+}
+
+.erp-icon-indigo {
+    background: #6366f1;
+}
+
+/* Toegankelijkheid */
+.erp-card:focus,
+.erp-card:focus-visible {
+    outline: 3px solid rgba(99,102,241,.35);
+    outline-offset: 2px;
+}
+
+/* Verminder animaties indien gevraagd */
+@media (prefers-reduced-motion: reduce) {
+    .erp-card {
+        transition: none !important;
+    }
+}

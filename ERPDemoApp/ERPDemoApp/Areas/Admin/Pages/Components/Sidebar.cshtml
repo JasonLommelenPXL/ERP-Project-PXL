@@ -1,0 +1,81 @@
+@{
+ var path = Context.Request.Path.ToString();
+}
+<aside class="admin-sidebar">
+ <div class="admin-sidebar__brand">
+ <i class="bi bi-shield-lock"></i>
+ <a href="/admin" class="text-decoration-none"><span>AdminCenter</span></a>
+ </div>
+
+ <nav class="admin-nav" aria-label="Admin navigation">
+ <div class="admin-nav__section">Overzicht</div>
+ <a class="admin-nav__link @(path == "/admin" ? "active" : null)" href="/admin">
+ <i class="bi bi-speedometer2"></i>
+ <span>Dashboard</span>
+ </a>
+
+ <div class="admin-nav__section">Bedrijven</div>
+ <a class="admin-nav__link @(path.StartsWith("/admin/companies") ? "active" : null)" href="/admin/companies">
+ <i class="bi bi-buildings"></i>
+ <span>Alle bedrijven</span>
+ <span class="admin-nav__pill">128</span>
+ </a>
+ <a class="admin-nav__link" href="/admin/companies/pending">
+ <i class="bi bi-hourglass-split"></i>
+ <span>Wacht op review</span>
+ <span class="admin-nav__pill admin-nav__pill--warn">7</span>
+ </a>
+ <a class="admin-nav__link" href="/admin/companies/flags">
+ <i class="bi bi-flag"></i>
+ <span>Gemarkeerd</span>
+ </a>
+
+ <div class="admin-nav__section">Abonnementen</div>
+ <a class="admin-nav__link" href="/admin/subscriptions">
+ <i class="bi bi-recycle"></i>
+ <span>Actieve abonnementen</span>
+ </a>
+ <a class="admin-nav__link" href="/admin/billing">
+ <i class="bi bi-receipt"></i>
+ <span>Facturatie</span>
+ </a>
+
+ <div class="admin-nav__section">Beheer</div>
+ <a class="admin-nav__link" href="/admin/users">
+ <i class="bi bi-people"></i>
+ <span>Gebruikers & Rollen</span>
+ </a>
+ <a class="admin-nav__link" href="/admin/audit">
+ <i class="bi bi-shield-check"></i>
+ <span>Audit log</span>
+ </a>
+ <a class="admin-nav__link" href="/admin/integrations">
+ <i class="bi bi-plugin"></i>
+ <span>Koppelingen</span>
+ </a>
+
+ <div class="admin-nav__section">Support</div>
+ <a class="admin-nav__link" href="/admin/tickets">
+ <i class="bi bi-life-preserver"></i>
+ <span>Supporttickets</span>
+ <span class="admin-nav__pill admin-nav__pill--accent">3</span>
+ </a>
+
+ <div class="admin-nav__section">Systeem</div>
+ <a class="admin-nav__link" href="/admin/settings">
+ <i class="bi bi-gear"></i>
+ <span>Instellingen</span>
+ </a>
+ </nav>
+
+ <div class="admin-sidebar__footer">
+ <a class="admin-chip" href="/admin/profile">
+ <i class="bi bi-person-badge"></i>
+ <span>Beheerder</span>
+ </a>
+ <a class="admin-cta" href="/admin/logout">
+ <i class="bi bi-box-arrow-right"></i>
+ <span>Uitloggen</span>
+ </a>
+ </div>
+</aside>

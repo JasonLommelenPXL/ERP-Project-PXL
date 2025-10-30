@@ -1,0 +1,139 @@
+﻿/* =========================
+   StartNow – formulierstijl
+   Sluit aan op je tokens in site.css
+   ========================= */
+:root {
+    --sn-ink: var(--text);
+    --sn-ink-dim: var(--text-dim);
+    --sn-brd: var(--border);
+    --sn-surface: var(--surface);
+    --sn-muted: var(--surface-muted);
+    --sn-radius: 16px;
+    --sn-shadow: 0 18px 44px rgba(17,24,39,.08);
+}
+
+/* Wrapper */
+.sn-wrap {
+    background: linear-gradient(180deg, var(--sn-muted) 0%, transparent 140%);
+}
+
+/* Header met icoonbadge */
+.sn-header .sn-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+    box-shadow: 0 10px 22px rgba(99,102,241,.35);
+    font-size: 1.2rem;
+}
+
+.sn-title {
+    font-weight: 900;
+    letter-spacing: -.01em;
+    color: var(--sn-ink);
+}
+
+.sn-sub {
+    color: var(--sn-ink-dim);
+}
+
+/* Card */
+.sn-card {
+    border-color: var(--sn-brd) !important;
+    border-radius: 18px;
+    padding: 1.25rem;
+    box-shadow: var(--sn-shadow);
+}
+
+@media (min-width: 768px) {
+    .sn-card {
+        padding: 1.6rem;
+    }
+}
+
+/* Controls */
+.sn-control {
+    border-radius: 12px !important;
+    border-color: var(--sn-brd);
+    background: #fff;
+    padding: .7rem .9rem;
+    transition: box-shadow .12s ease, border-color .12s ease, background-color .12s ease;
+}
+
+    .sn-control::placeholder {
+        color: #c0c4cc;
+    }
+
+    .sn-control:focus {
+        border-color: color-mix(in srgb, var(--accent) 45%, var(--sn-brd));
+        box-shadow: 0 0 0 .2rem rgba(99,102,241,.10);
+    }
+
+/* Help tekst */
+.sn-help {
+    color: var(--sn-ink-dim);
+}
+
+/* Card footer */
+.sn-card__footer {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--sn-brd);
+}
+
+.sn-legal {
+    color: var(--sn-ink-dim);
+}
+
+.sn-link {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+    .sn-link:hover {
+        color: color-mix(in srgb, var(--accent) 85%, black);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+
+/* Buttons */
+.sn-btn-back {
+    --_h: 44px;
+    height: var(--_h);
+    padding: .45rem .9rem;
+    font-weight: 700;
+    border-radius: .9rem;
+    border: 1px solid var(--sn-brd);
+    background: #fff;
+    color: var(--sn-ink);
+    box-shadow: 0 6px 16px rgba(17,24,39,.06);
+    transition: transform .06s ease, box-shadow .15s ease, background .15s ease;
+}
+
+    .sn-btn-back:hover {
+        transform: translateY(-1px);
+        background: var(--sn-muted);
+        box-shadow: 0 10px 22px rgba(17,24,39,.09);
+    }
+
+/* CTA hergebruikt .erp-btn-cta; hier evt. breedte & spacing */
+.sn-btn-cta {
+    padding-left: 1.05rem;
+    padding-right: 1.05rem;
+}
+
+/* Kleinere schermen – lucht */
+@media (max-width: 575.98px) {
+    .sn-card {
+        padding: 1.1rem;
+    }
+
+    .sn-header .sn-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,61 @@
+@* Marketing / Clean white sticky navbar *@
+<nav class="erp-nav navbar navbar-expand-lg" aria-label="Primary">
+    <div class="container">
+        <!-- Brand -->
+        <a class="erp-nav__brand navbar-brand" asp-area="" asp-page="/Index">
+            <span class="erp-nav__dot"></span>
+            ERPDemoApp
+        </a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler erp-nav__toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false"
+                aria-label="Menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible -->
+        <div id="mainNavbar" class="collapse navbar-collapse">
+            <!-- Center nav -->
+            <ul class="navbar-nav mx-lg-auto erp-nav__menu">
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-page="/Index">Modules</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pakketten</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Community</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Prijzen</a>
+                </li>
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link" asp-area="" asp-page="/Privacy">Privacy</a>
+                </li>
+            </ul>
+           
+            <!-- Right actions -->
+            <div class="d-flex gap-2 erp-nav__actions">
+                <a class="btn erp-btn-ghost" href="/Account/Login">Aanmelden</a>
+                <a class="btn erp-btn-cta" asp-page="/Shared/StartNow">Probeer het gratis</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+@section Scripts {
+    <script>
+        // Optioneel: geef de navbar een subtiele schaduw na scroll
+        (function () {
+          const nav = document.querySelector('.erp-nav');
+          const toggle = () => {
+            if (window.scrollY > 8) nav.classList.add('is-scrolled');
+            else nav.classList.remove('is-scrolled');
+          };
+          toggle();
+          window.addEventListener('scroll', toggle, { passive: true });
+        })();
+    </script>
+}

@@ -1,0 +1,16 @@
+@page
+@model PageModel
+@{
+ ViewData["Title"] = "Tenant Admin";
+}
+<section class="container py-5">
+ <h1 class="mb-3">Welkom bij het tenant dashboard</h1>
+ <p class="text-muted">Deze pagina is beschermd door de policy <code>TenantAuthenticated</code> en bereikbaar onder het pad <code>/{tenant}/admin</code>.</p>
+ <ul>
+ <li>Huidige tenant (route): @RouteData.Values["tenant"]</li>
+ <li>Ingelogde gebruiker: @User.Identity?.Name</li>
+ </ul>
+ <p>
+ <a class="btn btn-outline-secondary" href="/">Terug naar home</a>
+ </p>
+</section>

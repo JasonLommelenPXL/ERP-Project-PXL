@@ -1,0 +1,165 @@
+﻿@page "/StartNow"
+@model StartNowModel
+@{
+    ViewData["Title"] = "Bedrijfsgegevens";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/pages/startnow.css" asp-append-version="true" />
+}
+
+<section class="sn-wrap py-4 py-md-5">
+    <div class="container">
+        <!-- Titel met icon-badge -->
+        <div class="sn-header d-flex align-items-center gap-3 mb-3">
+            <span class="sn-icon" aria-hidden="true">
+                <i class="bi bi-building"></i>
+            </span>
+            <div>
+                <h1 class="sn-title mb-0">Bedrijfsgegevens</h1>
+                <p class="sn-sub mb-0">Nog één stap – we zetten je omgeving klaar</p>
+            </div>
+        </div>
+
+        <!-- Card -->
+        <div class="sn-card bg-white border">
+            <form method="post" novalidate>
+                @Html.AntiForgeryToken()
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <div class="row g-3 g-md-4">
+                    <!-- Bedrijf -->
+                    <div class="col-12 col-md-6">
+                        <label asp-for="Input.Company" class="form-label fw-semibold"></label>
+                        <input asp-for="Input.Company" class="form-control sn-control" placeholder="Jouw bedrijfsnaam" />
+                        <span asp-validation-for="Input.Company" class="text-danger small"></span>
+                    </div>
+
+                    <!-- BTW -->
+                    <div class="col-12 col-md-6">
+                        <label asp-for="Input.Vat" class="form-label fw-semibold"></label>
+                        <input asp-for="Input.Vat" class="form-control sn-control" placeholder="BE0123.456.789" />
+                        <div class="form-text sn-help">Voor België: BE + 10 cijfers</div>
+                        <span asp-validation-for="Input.Vat" class="text-danger small"></span>
+                    </div>
+
+                    <!-- Land -->
+                    <div class="col-12 col-md-6">
+                        <label asp-for="Input.Country" class="form-label fw-semibold"></label>
+                        <select asp-for="Input.Country" class="form-select sn-control">
+                            <option value="">Kies...</option>
+                            <option value="BE">België</option>
+                            <option value="NL">Nederland</option>
+                            <option value="FR">Frankrijk</option>
+                            <option value="DE">Duitsland</option>
+                        </select>
+                        <span asp-validation-for="Input.Country" class="text-danger small"></span>
+                    </div>
+
+                    <!-- Provincie -->
+                    <div class="col-12 col-md-6">
+                        <label asp-for="Input.Province" class="form-label fw-semibold"></label>
+                        <select asp-for="Input.Province" class="form-select sn-control">
+                            <option value="">Kies...</option>
+                            <option>Antwerpen</option>
+                            <option>Oost-Vlaanderen</option>
+                            <option>West-Vlaanderen</option>
+                            <option>Vlaams-Brabant</option>
+                            <option>Limburg</option>
+                            <option>Brussels Hoofdstedelijk Gewest</option>
+                        </select>
+                    </div>
+
+                    <!-- Postcode -->
+                    <div class="col-12 col-md-6">
+                        <label asp-for="Input.Zip" class="form-label fw-semibold"></label>
+                        <input asp-for="Input.Zip" class="form-control sn-control" placeholder="Bv. 2000" />
+                    </div>
+
+                    <!-- Gemeente -->
+                    <div class="col-12 col-md-6">
+                        <label asp-for="Input.City" class="form-label fw-semibold"></label>
+                        <input asp-for="Input.City" class="form-control sn-control" placeholder="Bv. Antwerpen" />
+                    </div>
+
+                    <!-- Straat -->
+                    <div class="col-12 col-md-6">
+                        <label asp-for="Input.Street" class="form-label fw-semibold"></label>
+                        <input asp-for="Input.Street" class="form-control sn-control" placeholder="Bv. Meir" />
+                    </div>
+
+                    <!-- Nummer -->
+                    <div class="col-12 col-md-3">
+                        <label asp-for="Input.Number" class="form-label fw-semibold"></label>
+                        <input asp-for="Input.Number" class="form-control sn-control" placeholder="Bv. 10" />
+                    </div>
+
+                    <!-- Bus -->
+                    <div class="col-12 col-md-3">
+                        <label asp-for="Input.Bus" class="form-label fw-semibold"></label>
+                        <input asp-for="Input.Bus" class="form-control sn-control" placeholder="(optioneel)" />
+                    </div>
+
+                    <!-- Contactpersoon -->
+                    <div class="col-12 col-md-6">
+                        <label asp-for="Input.ContactName" class="form-label fw-semibold"></label>
+                        <input asp-for="Input.ContactName" class="form-control sn-control" placeholder="Voor- en achternaam" />
+                        <span asp-validation-for="Input.ContactName" class="text-danger small"></span>
+                    </div>
+
+                    <!-- Telefoon -->
+                    <div class="col-12 col-md-6">
+                        <label asp-for="Input.Phone" class="form-label fw-semibold"></label>
+                        <input asp-for="Input.Phone" class="form-control sn-control" placeholder="+32 4 12 34 56 78" />
+                        <span asp-validation-for="Input.Phone" class="text-danger small"></span>
+                    </div>
+
+                    <!-- E-mail -->
+                    <div class="col-12 col-md-6">
+                        <label asp-for="Input.Email" class="form-label fw-semibold"></label>
+                        <input asp-for="Input.Email" class="form-control sn-control" placeholder="jij@bedrijf.be" />
+                        <span asp-validation-for="Input.Email" class="text-danger small"></span>
+                    </div>
+
+                    <!-- Website/naam -->
+                    <div class="col-12 col-md-6">
+                        <label asp-for="Input.WebsiteName" class="form-label fw-semibold"></label>
+                        <input asp-for="Input.WebsiteName" class="form-control sn-control" placeholder="Publieke naam of domein (optioneel)" />
+                    </div>
+
+                    <!-- Wachtwoord -->
+                    <div class="col-12 col-md-6">
+                        <label asp-for="Input.Password" class="form-label fw-semibold"></label>
+                        <input asp-for="Input.Password" class="form-control sn-control" />
+                        <span asp-validation-for="Input.Password" class="text-danger small"></span>
+                    </div>
+
+                    <!-- Wachtwoord herhalen -->
+                    <div class="col-12 col-md-6">
+                        <label asp-for="Input.ConfirmPassword" class="form-label fw-semibold"></label>
+                        <input asp-for="Input.ConfirmPassword" class="form-control sn-control" />
+                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger small"></span>
+                    </div>
+                </div>
+
+                <!-- Footer van de card -->
+                <div class="sn-card__footer d-flex flex-wrap gap-2 align-items-center justify-content-between">
+                    <div class="sn-legal small">
+                        Door te klikken op <strong>Start nu</strong> ga je akkoord met onze
+                        <a href="#" class="sn-link">Abonnementsovereenkomst</a> en
+                        <a href="/Privacy" class="sn-link">Privacybeleid</a>.
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <a href="javascript:history.back()" class="btn sn-btn-back">
+                            <i class="bi bi-chevron-left me-1"></i> Terug
+                        </a>
+                        <button type="submit" class="btn erp-btn-cta sn-btn-cta">
+                            Start nu <i class="bi bi-arrow-right-short ms-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

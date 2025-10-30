@@ -1,9 +1,211 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "Je business op één platform";
 }
 
-<div class="mt-4">
-    @await Html.PartialAsync("~/Pages/Frontend/_Dashboard.cshtml")
-</div>
+@section Styles {
+    <link rel="stylesheet" href="~/css/pages/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+}
+
+<section class="od-hero">
+    <div class="container py-5">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+                <h1 class="od-hero-title">
+                    Het hart van je bedrijf op <em>één platform</em>.
+                </h1>
+                <p class="lead text-muted mb-4">
+                    Snel, efficiënt en goedkoop. Kies je modules en start in minuten.
+                </p>
+
+                <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-primary btn-lg px-4" asp-page="/Shared/StartNow">Start nu – Het is gratis</a>
+                    <a class="btn btn-outline-secondary btn-lg px-4" asp-page="/Privacy">Meer info</a>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="od-hero-card shadow-sm rounded-4 p-3 bg-white">
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="bi bi-rocket-takeoff fs-1 text-primary"></i>
+                        <div>
+                            <div class="fw-bold">Supersnelle onboarding</div>
+                            <div class="text-muted small">Je omgeving staat in <strong>~1 minuut</strong> klaar.</div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="bi bi-shield-check fs-1 text-success"></i>
+                        <div>
+                            <div class="fw-bold">GDPR-proof & veilig</div>
+                            <div class="text-muted small">Single Sign-On, audit logs en rechten per rol.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="od-hero-bg"></div>
+</section>
+
+<section class="od-apps py-5">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold mb-1">Onze modules</h2>
+            <p class="text-muted">Neem een kijkje in onze taloze modules.</p>
+        </div>
+
+        <!-- Samenvatting / filter -->
+        <div class="od-toolbar bg-white border rounded-3 shadow-sm p-3 mb-4">
+            <div class="d-flex flex-wrap align-items-center gap-3">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-funnel text-muted"></i>
+                    <select id="filterSelect" class="form-select form-select-sm">
+                        <option value="">Alle categorieën</option>
+                        <option value="sales">Verkoop</option>
+                        <option value="operations">Operaties</option>
+                        <option value="finance">Financiën</option>
+                        <option value="hr">HR</option>
+                        <option value="website">Website & Marketing</option>
+                    </select>
+                </div>
+
+                <div class="ms-auto small text-muted">
+                    Geselecteerd: <strong id="selectedCount">0</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- App grid -->
+        <div id="appGrid" class="row g-3">
+
+            @* VERKOOP *@
+            <div class="col-12 col-sm-6 col-lg-4">
+                <label class="od-app card h-100" data-cat="sales" aria-label="CRM">
+                    <input type="checkbox" class="od-app__check" hidden />
+                    <div class="card-body">
+                        <div class="od-app__icon"><i class="bi bi-people-fill"></i></div>
+                        <div class="od-app__title">CRM</div>
+                        <div class="od-app__desc">Volg leads op en sluit verkopen af</div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <label class="od-app card h-100" data-cat="sales" aria-label="Verkoop">
+                    <input type="checkbox" class="od-app__check" hidden />
+                    <div class="card-body">
+                        <div class="od-app__icon"><i class="bi bi-basket"></i></div>
+                        <div class="od-app__title">Verkoop</div>
+                        <div class="od-app__desc">Van offertes tot facturen</div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <label class="od-app card h-100" data-cat="sales" aria-label="Kassa (POS)">
+                    <input type="checkbox" class="od-app__check" hidden />
+                    <div class="card-body">
+                        <div class="od-app__icon"><i class="bi bi-shop"></i></div>
+                        <div class="od-app__title">Kassa (POS)</div>
+                        <div class="od-app__desc">Verkooppunt voor winkels en restaurants</div>
+                    </div>
+                </label>
+            </div>
+
+            @* OPERATIES *@
+            <div class="col-12 col-sm-6 col-lg-4">
+                <label class="od-app card h-100" data-cat="operations" aria-label="Voorraad">
+                    <input type="checkbox" class="od-app__check" hidden />
+                    <div class="card-body">
+                        <div class="od-app__icon"><i class="bi bi-box-seam"></i></div>
+                        <div class="od-app__title">Voorraad</div>
+                        <div class="od-app__desc">Beheer je voorraad en logistiek</div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <label class="od-app card h-100" data-cat="operations" aria-label="Inkoop">
+                    <input type="checkbox" class="od-app__check" hidden />
+                    <div class="card-body">
+                        <div class="od-app__icon"><i class="bi bi-truck"></i></div>
+                        <div class="od-app__title">Inkoop</div>
+                        <div class="od-app__desc">Orders, offertes en overeenkomsten</div>
+                    </div>
+                </label>
+            </div>
+
+            @* FINANCIËN *@
+            <div class="col-12 col-sm-6 col-lg-4">
+                <label class="od-app card h-100" data-cat="finance" aria-label="Boekhouding">
+                    <input type="checkbox" class="od-app__check" hidden />
+                    <div class="card-body">
+                        <div class="od-app__icon"><i class="bi bi-calculator"></i></div>
+                        <div class="od-app__title">Boekhouding</div>
+                        <div class="od-app__desc">Automatische bankkoppeling en facturen</div>
+                    </div>
+                </label>
+            </div>
+
+            @* HR *@
+            <div class="col-12 col-sm-6 col-lg-4">
+                <label class="od-app card h-100" data-cat="hr" aria-label="HR & Uren">
+                    <input type="checkbox" class="od-app__check" hidden />
+                    <div class="card-body">
+                        <div class="od-app__icon"><i class="bi bi-person-badge"></i></div>
+                        <div class="od-app__title">HR & Uren</div>
+                        <div class="od-app__desc">Personeelsbeheer, uurregistratie en verlof</div>
+                    </div>
+                </label>
+            </div>
+
+            @* WEBSITE/MARKETING *@
+            <div class="col-12 col-sm-6 col-lg-4">
+                <label class="od-app card h-100" data-cat="website" aria-label="Marketing">
+                    <input type="checkbox" class="od-app__check" hidden />
+                    <div class="card-body">
+                        <div class="od-app__icon"><i class="bi bi-megaphone"></i></div>
+                        <div class="od-app__title">Marketing</div>
+                        <div class="od-app__desc">Campagnes, e-mail en websitebeheer</div>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Voeg gerust meer cards toe (zelfde markup) -->
+        </div>
+
+        <div class="text-center mt-4">
+            <a class="btn btn-primary btn-lg px-4" asp-page="/Shared/StartNow">Start gratis met je selectie</a>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        (() => {
+            const grid = document.getElementById('appGrid');
+            const selCount = document.getElementById('selectedCount');
+            const filter = document.getElementById('filterSelect');
+
+            function updateSummary() {
+                const checks = grid.querySelectorAll('.od-app__check:checked');
+                selCount.textContent = checks.length;
+            }
+
+            grid.addEventListener('change', updateSummary);
+            updateSummary();
+
+            filter.addEventListener('change', () => {
+                const cat = filter.value;
+                grid.querySelectorAll('.od-app').forEach(card => {
+                    const show = !cat || card.dataset.cat === cat;
+                    card.closest('.col-12, .col-sm-6, .col-lg-4').style.display = show ? '' : 'none';
+                });
+            });
+        })();
+    </script>
+}

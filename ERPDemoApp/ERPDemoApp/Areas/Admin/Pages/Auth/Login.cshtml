@@ -1,0 +1,53 @@
+@page "/admin/login"
+@model ERPDemoApp.Areas.Admin.Pages.Auth.LoginModel
+@{
+ Layout = "/Pages/Shared/_AdminAuthLayout.cshtml";
+ ViewData["Title"] = "Admin login";
+}
+
+<section class="container" style="max-width:520px">
+ <div class="card shadow-sm">
+ <div class="card-body p-4">
+ <h1 class="h4 mb-1">Inloggen</h1>
+ <p class="text-muted mb-4">Log in om het AdminCenter te openen.</p>
+
+ <form method="post">
+ @Html.AntiForgeryToken()
+ <input type="hidden" asp-for="ReturnUrl" />
+
+ <div class="mb-3">
+ <label class="form-label" asp-for="Email">E-mail</label>
+ <input class="form-control" asp-for="Email" autocomplete="username" required />
+ <span class="text-danger small" asp-validation-for="Email"></span>
+ </div>
+
+ <div class="mb-3">
+ <label class="form-label" asp-for="Password">Wachtwoord</label>
+ <input class="form-control" asp-for="Password" type="password" autocomplete="current-password" required />
+ <span class="text-danger small" asp-validation-for="Password"></span>
+ </div>
+
+ <div class="form-check mb-3">
+ <input class="form-check-input" asp-for="RememberMe" />
+ <label class="form-check-label" asp-for="RememberMe">Wachtwoord opslaan (ingelogd blijven)</label>
+ </div>
+
+ @if (!string.IsNullOrEmpty(Model.Error))
+ {
+ <div class="alert alert-danger py-2">@Model.Error</div>
+ }
+
+ <div class="d-flex gap-2">
+ <button class="btn btn-primary" type="submit">
+ <i class="bi bi-box-arrow-in-right"></i> Inloggen
+ </button>
+ <a class="btn btn-outline-secondary" href="/">Annuleren</a>
+ </div>
+ </form>
+ </div>
+ </div>
+</section>
+
+@section Scripts {
+ <partial name="_ValidationScriptsPartial" />
+}

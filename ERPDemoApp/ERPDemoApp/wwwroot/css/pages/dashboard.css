@@ -1,0 +1,12 @@
+﻿/* ========== Dashboard (cards/secties) ========== */
+/* Deze pagina gebruikt nu de generieke component-styles uit components/cards.css */
+
+.erp-content { 
+    flex:11 auto; 
+    background: var(--surface); 
+    padding:1.25rem 1.25rem 2rem; 
+    min-width: 0 
+
+}
+
+/* Eventueel dashboard-specifieke overrides kunnen hier bijgevoegd worden. */
