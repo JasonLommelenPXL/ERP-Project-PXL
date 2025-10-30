@@ -46,16 +46,12 @@ namespace ERPDemoApp
                 options.Conventions.AllowAnonymousToAreaFolder("App", "/Auth");
             });
 
-            // Afzonderlijk authenticatieschema voor Admin (niet de global default)
-            const string AdminScheme = "AdminScheme";
-            const string TenantScheme = "TenantScheme";
-
             builder.Services.AddAuthentication(options =>
             {
                 // Laat DefaultAuthenticateScheme en DefaultChallengeScheme leeg zodat de
                 // Admin-cookie niet het hele ERP als ingelogd markeert.
             })
-            .AddCookie(AdminScheme, options =>
+            .AddCookie(AuthSchemes.Admin, options =>
             {
                 options.LoginPath = "/admin/login";
                 options.LogoutPath = "/admin/logout";
@@ -70,7 +66,7 @@ namespace ERPDemoApp
                 options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
             })
             // Cookie voor tenant-login (frontend)
-            .AddCookie(TenantScheme, options =>
+            .AddCookie(AuthSchemes.Tenant, options =>
             {
                 options.LoginPath = "/account/login";
                 options.AccessDeniedPath = "/account/denied";
@@ -88,7 +84,7 @@ namespace ERPDemoApp
                 // Bestaande Admin policy (ongewijzigd)
                 options.AddPolicy("AdminOnly", policy =>
                 {
-                    policy.AddAuthenticationSchemes(AdminScheme);
+                    policy.AddAuthenticationSchemes(AuthSchemes.Admin);
                     policy.RequireAuthenticatedUser();
                     policy.RequireRole("Admin");
                 });
@@ -96,7 +92,7 @@ namespace ERPDemoApp
                 // Tenant policy: ingelogd met tenantcookie + optionele tenant-claim match
                 options.AddPolicy("TenantAuthenticated", policy =>
                 {
-                    policy.AddAuthenticationSchemes(TenantScheme);
+                    policy.AddAuthenticationSchemes(AuthSchemes.Tenant);
                     policy.RequireAuthenticatedUser();
                     policy.RequireAssertion(ctx =>
                     {

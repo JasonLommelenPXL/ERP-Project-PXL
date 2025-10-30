@@ -1,6 +1,5 @@
 using ERPDemoApp;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
@@ -58,8 +57,8 @@ public class StartNowModel : PageModel
             new Claim("tenant", tenant),
             new Claim("role","Owner") // bv. Tenant-eigenaar
         };
-        var id = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-        await HttpContext.SignInAsync(new ClaimsPrincipal(id));
+        var id = new ClaimsIdentity(claims, AuthSchemes.Tenant);
+        await HttpContext.SignInAsync(AuthSchemes.Tenant, new ClaimsPrincipal(id));
     }
 }
 
