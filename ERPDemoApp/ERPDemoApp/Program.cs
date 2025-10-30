@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace ERPDemoApp
@@ -259,13 +260,17 @@ namespace ERPDemoApp
     // Conventie: voeg voor Area='App' een extra route toe: "{tenant}/..."
     public sealed class AppAreaTenantRouteConvention : IPageRouteModelConvention
     {
+        private static readonly Regex RouteParameterRegex = new(@"\{([^{}]+)\}");
+
         private readonly string _area;
         private readonly string _prefix;
+        private readonly HashSet<string> _prefixParameterNames;
 
         public AppAreaTenantRouteConvention(string areaName, string routePrefix)
         {
             _area = areaName;
             _prefix = routePrefix.Trim('/');
+            _prefixParameterNames = new HashSet<string>(ExtractParameterNames(_prefix), StringComparer.OrdinalIgnoreCase);
         }
 
         public void Apply(PageRouteModel model)
@@ -277,18 +282,77 @@ namespace ERPDemoApp
             foreach (var sel in model.Selectors.ToArray())
             {
                 var template = sel.AttributeRouteModel?.Template ?? string.Empty; // bijv: "App/Onboarding/Account"
-                // Strip het 'App/'-gedeelte voor nette URLs: "{tenant}/Onboarding/Account"
+
+                // Strip het 'App/'-gedeelte en leidende slashes voor nette URLs: "{tenant}/Onboarding/Account"
                 var clean = template.StartsWith(_area + "/", StringComparison.OrdinalIgnoreCase)
-                    ? template.Substring(_area.Length +1)
+                    ? template.Substring(_area.Length + 1)
                     : template;
+                clean = clean.Trim('/');
+
+                if (SharesRouteParameterWithPrefix(clean))
+                {
+                    // Het bestaande template bevat al dezelfde parameter (bv. {tenant}); oversla de extra route.
+                    continue;
+                }
+
+                var finalTemplate = string.IsNullOrEmpty(clean)
+                    ? _prefix
+                    : $"{_prefix}/{clean}";
 
                 model.Selectors.Add(new SelectorModel
                 {
                     AttributeRouteModel = new AttributeRouteModel
                     {
-                        Template = $"{_prefix}/{clean}"
+                        Template = finalTemplate
                     }
                 });
+            }
+        }
+
+        private bool SharesRouteParameterWithPrefix(string template)
+        {
+            if (_prefixParameterNames.Count == 0 || string.IsNullOrEmpty(template))
+                return false;
+
+            foreach (var parameter in ExtractParameterNames(template))
+            {
+                if (_prefixParameterNames.Contains(parameter))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private static IEnumerable<string> ExtractParameterNames(string template)
+        {
+            if (string.IsNullOrEmpty(template)) yield break;
+
+            foreach (Match match in RouteParameterRegex.Matches(template))
+            {
+                var content = match.Groups[1].Value;
+
+                var colonIndex = content.IndexOf(':');
+                if (colonIndex >= 0)
+                {
+                    content = content.Substring(0, colonIndex);
+                }
+
+                var equalsIndex = content.IndexOf('=');
+                if (equalsIndex >= 0)
+                {
+                    content = content.Substring(0, equalsIndex);
+                }
+
+                content = content.TrimEnd('?');
+                content = content.TrimStart('*');
+                content = content.Trim();
+
+                if (!string.IsNullOrEmpty(content))
+                {
+                    yield return content;
+                }
             }
         }
     }
